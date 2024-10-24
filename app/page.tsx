@@ -27,7 +27,6 @@ export default function LandingPage() {
       <GoogleRanking />
       <TwoColumnSection />
       <Testimonials />
-      <ProjectShowcase />
       <Ratings />
       <TargetAudience />
       <DriveCustomers />

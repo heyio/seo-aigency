@@ -25,10 +25,10 @@ export default function DriveCustomers() {
     >
       <div className="container mx-auto px-4">
         <motion.h2 className="text-3xl font-bold mb-8 text-center" variants={fadeInUp}>
-          Drive the Right Customers to Your Website
+          Bringen Sie die richtigen Kunden auf Ihre Website
         </motion.h2>
         <motion.p className="text-lg mb-8 text-center max-w-2xl mx-auto" variants={fadeInUp}>
-          Our SEO strategies are designed to attract high-quality, targeted traffic to your website. We focus on bringing in visitors who are more likely to convert into customers, maximizing your ROI.
+          Unsere SEO-Strategien zielen darauf ab, qualitativ hochwertigen und gezielten Traffic auf Ihre Website zu bringen. Wir konzentrieren uns darauf die Kunden die sie suchen zu ihrer Website zu leiten, um Ihre Umsätze zu maximieren.
         </motion.p>
       </div>
     </motion.section>

@@ -7,6 +7,7 @@ import {
   CardTitle,
 } from '@/components/ui/card';
 import { Star } from 'lucide-react';
+import { title } from 'process';
 
 export default function Ratings() {
   const fadeInUp = {
@@ -36,10 +37,35 @@ export default function Ratings() {
           className="text-3xl font-bold mb-8 text-center"
           variants={fadeInUp}
         >
-          5-Star Results
+          Unsere Kunden sind von den Ergebnissen begeistert
         </motion.h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {[1, 2, 3].map((index) => (
+          {[
+            {
+              title: 'Markus Fischer, Gründer von FischerTech Innovations',
+              image: [
+                'public/images/unsplash.jpg?height=300&width=400',
+              ],
+              description:
+                "Nach der Umsetzung der SEO AIgency-Strategien stieg der Traffic unserer Website um 150 %.",
+            },
+            {
+              title: 'Anna Weber, CEO von Berlin Webworks',
+              image: [
+                'public/images/unsplash.jpg?height=300&width=400'
+              ],
+              description:
+                "Dank des innovativen Ansatzes von SEO AIgency sind unsere organischen Suchergebnisse in die Höhe geschnellt. Wir haben innerhalb von nur zwei Monaten einen Anstieg der Leads um 200 % verzeichnet!",
+            },
+            {
+              title: 'Lukas Schmidt, Marketing Director von DACH Solutions',
+              image: [
+                'public/images/unsplash.jpg?height=300&width=400'
+              ],
+              description:
+                "Die von SEO AIgency umgesetzten KI-gesteuerten Strategien haben nicht nur unsere Sichtbarkeit erhöht, sondern auch unser Nutzerengagement deutlich verbessert. Wir sind mit den Ergebnissen mehr als zufrieden."
+            }
+          ].map((rating, index) => (
             <motion.div key={index} variants={fadeInUp}>
               <Card className="h-full border-0 shadow-lg">
                 <CardHeader>
@@ -52,12 +78,12 @@ export default function Ratings() {
                     ))}
                   </CardTitle>
                   <CardDescription>
-                    Jane Smith, Marketing Manager
+                    {rating.title}
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
                   <p>
-                    {`Our website's traffic increased by 150% after implementing SEO AIgency's strategies.`}
+                    {rating.description}
                   </p>
                 </CardContent>
               </Card>

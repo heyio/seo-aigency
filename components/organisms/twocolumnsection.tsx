@@ -6,38 +6,30 @@ import Image from 'next/image';
 
 const columnData = [
   {
-    title: 'On-Page SEO',
-    images: [
-      'public/images/unsplash.jpg?height=300&width=400',
-      'public/images/unsplash.jpg?height=300&width=400',
-    ],
-    description:
-      "Optimize your website's content and structure to improve search engine rankings and user experience.",
+    title: "On-Page SEO",
+    images: ["/placeholder.svg?height=300&width=400", "/placeholder.svg?height=300&width=400"],
+    description: "Optimieren Sie den Inhalt und die Struktur Ihrer Website, um das Ranking in Suchmaschinen und die Benutzererfahrung zu verbessern.",
     listItems: [
-      'Keyword optimization',
-      'Meta tags improvement',
-      'Content quality enhancement',
-      'URL structure optimization',
-      'Internal linking strategy',
-    ],
+      "Keyword-Optimierung",
+      "Verbesserung der Meta-Tags",
+      "Verbesserung der Inhaltsqualität",
+      "Optimierung der URL-Struktur",
+      "Interne Verlinkungsstrategie"
+    ]
   },
   {
-    title: 'Off-Page SEO',
-    images: [
-      'public/images/unsplash.jpg?height=300&width=400',
-      'public/images/unsplash.jpg?height=300&width=400',
-    ],
-    description:
-      "Build your website's authority and reputation through external optimization techniques.",
+    title: "Off-Page SEO",
+    images: ["/placeholder.svg?height=300&width=400", "/placeholder.svg?height=300&width=400"],
+    description: "Bauen Sie die Autorität und Reputation Ihrer Website durch Optimierungstechniken abseits von SEO auf.",
     listItems: [
-      'Link building',
-      'Social media marketing',
-      'Influencer outreach',
-      'Brand mentions',
-      'Local SEO strategies',
-    ],
-  },
-];
+      "Linkaufbau",
+      "Social Media Marketing",
+      "Influencer-Outreach",
+      "Markenerwähnungen",
+      "Lokale SEO-Strategien"
+    ]
+  }
+]
 
 export default function TwoColumnSection() {
   //const [activeImageIndex, setActiveImageIndex] = useState([0, 0])
@@ -71,7 +63,7 @@ export default function TwoColumnSection() {
           animate="animate"
           variants={fadeInUp}
         >
-          Our SEO Strategies
+          Unsere Strategie
         </motion.h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {columnData.map((column, columnIndex) => (

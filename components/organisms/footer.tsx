@@ -27,7 +27,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <motion.div variants={fadeInUp}>
             <h3 className="text-lg font-bold mb-4">SEO AIGENCY</h3>
-            <p>Boosting your online presence since 2010</p>
+            <p>Wir boosten Online Präsenzen seit 2016</p>
           </motion.div>
           <motion.div variants={fadeInUp}>
             <h3 className="text-lg font-bold mb-4">Contact Us</h3>
@@ -44,7 +44,7 @@ export default function Footer() {
           </motion.div>
         </div>
         <motion.div className="mt-8 text-center" variants={fadeInUp}>
-          <p>&copy; 2024 SEO AIGENCY. All rights reserved.</p>
+          <p>&copy; 2024 SEO AIGENCY. Alle rechte vorbehalten.</p>
         </motion.div>
       </div>
     </motion.footer>

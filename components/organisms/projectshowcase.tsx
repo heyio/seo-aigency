@@ -80,7 +80,7 @@ export default function ProjectShowcase() {
           className="text-3xl font-bold mb-8 text-center"
           variants={fadeInUp}
         >
-          Our Success Stories
+          Unsere Erfolgsgeschichten
         </motion.h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {columnData.map((column, columnIndex) => (

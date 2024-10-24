@@ -39,10 +39,10 @@ export default function Navigation() {
                 Services
               </a>
               <a href="#" className="text-gray-800 hover:text-gray-600">
-                About
+                Über uns
               </a>
               <a href="#" className="text-gray-800 hover:text-gray-600">
-                Contact
+                Kontakt
               </a>
             </div>
             <button
@@ -86,7 +86,7 @@ export default function Navigation() {
                   variants={menuItemVariants}
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  About
+                  Über uns
                 </motion.a>
                 <motion.a
                   href="#"
@@ -94,7 +94,7 @@ export default function Navigation() {
                   variants={menuItemVariants}
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  Contact
+                  Kontakt
                 </motion.a>
               </motion.div>
             </div>

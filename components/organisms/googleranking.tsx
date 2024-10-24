@@ -25,10 +25,10 @@ export default function GoogleRanking() {
     >
       <div className="container mx-auto px-4">
         <motion.h2 className="text-3xl font-bold mb-8 text-center" variants={fadeInUp}>
-          Rank Higher on Google
+          Höhere Platzierung bei Google
         </motion.h2>
         <motion.p className="text-lg mb-8 text-center max-w-2xl mx-auto" variants={fadeInUp}>
-          Our proven strategies and techniques help your website climb the search engine rankings, making it easier for potential customers to find you online.
+          Unsere Strategien und Techniken helfen Ihrer Website, in den Ranglisten der Suchmaschinen aufzusteigen, so dass potenzielle Kunden Sie online leichter finden können.
         </motion.p>
       </div>
     </motion.section>

@@ -28,13 +28,13 @@ export default function Services() {
           className="text-4xl font-bold mb-8 text-center"
           variants={fadeInUp}
         >
-          Our SEO Services
+          Unsere SEO-Dienstleistungen
         </motion.h2>
         <motion.p
           className="text-lg mb-8 text-center max-w-2xl mx-auto"
           variants={fadeInUp}
         >
-          {`We offer comprehensive SEO solutions tailored to your business needs. Our expert team uses cutting-edge techniques to improve your website's visibility and ranking on search engines.`}
+          {`Wir bieten umfassende SEO-Unterstützung und verwenden modernste Techniken, um die Sichtbarkeit und das Ranking Ihrer Website zu verbessern.`}
         </motion.p>
       </div>
     </motion.section>

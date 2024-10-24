@@ -32,13 +32,16 @@ export default function Pricing({ selectedPlan, setSelectedPlan }: PricingProps)
     >
       <div className="container mx-auto px-4">
         <motion.h2 className="text-3xl font-bold mb-8 text-center" variants={fadeInUp}>
-          Plans and Pricing
+          Wählen Sie ein Abonnement für ihr Wachstum
         </motion.h2>
+        <motion.div className="text-lg mb-8 text-center max-w-2xl mx-auto" variants={fadeInUp}>
+          Was ist Ihr Ziel? Wählen Sie ein Abonnement, das auf die Bedürfnisse Ihres Unternehmens zugeschnitten ist, und fügen Sie weitere Funktionen hinzu, um Ihren Erfolg zu sichern.
+        </motion.div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {[
-            { name: 'Basic', price: '$499/mo', checkFrequency: 'Once a month' },
-            { name: 'Pro', price: '$999/mo', checkFrequency: 'Once a week' },
-            { name: 'Enterprise', price: '$1999/mo', checkFrequency: 'Twice a week' }
+            { name: 'Basic', price: 'EUR 119 p. Monat', checkFrequency: '1x pro Monat' },
+            { name: 'Pro', price: 'EUR 499 p. Monat', checkFrequency: '1x pro Woche' },
+            { name: 'Boost', price: 'EUR 999 p. Monat', checkFrequency: '2x pro Woche' }
           ].map((plan, index) => (
             <motion.div key={index} variants={fadeInUp}>
               <Card className={selectedPlan === plan.name.toLowerCase() ? 'border-purple-500 border-2 bg-gradient-to-b from-white to-purple-200' : 
@@ -49,9 +52,9 @@ export default function Pricing({ selectedPlan, setSelectedPlan }: PricingProps)
                 </CardHeader>
                 <CardContent>
                   <ul className="list-disc list-inside">
-                    <li>SEO optimized website content</li>
-                    <li>Human check {plan.checkFrequency}</li>
-                    <li>Handholding service</li>
+                    <li>SEO-optimierter Website-Inhalt</li>
+                    <li>Human Check {plan.checkFrequency}</li>
+                    <li>Geführte Unterstützung</li>
                   </ul>
                 </CardContent>
                 <CardFooter>
@@ -60,7 +63,7 @@ export default function Pricing({ selectedPlan, setSelectedPlan }: PricingProps)
               'w-full text-base font-semibold'}
                     onClick={() => setSelectedPlan(plan.name.toLowerCase())}
                   >
-                    Choose Plan
+                    Abo wählen
                   </Button>
                 </CardFooter>
               </Card>
