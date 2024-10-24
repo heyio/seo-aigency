@@ -1,21 +1,25 @@
-'use client'
+'use client';
 
-import { useState } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
-import { Menu, X } from 'lucide-react'
+import { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Menu, X } from 'lucide-react';
 
 export default function Navigation() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const menuVariants = {
     closed: { opacity: 0, y: -20 },
-    open: { opacity: 1, y: 0, transition: { staggerChildren: 0.1, delayChildren: 0.2 } }
-  }
+    open: {
+      opacity: 1,
+      y: 0,
+      transition: { staggerChildren: 0.1, delayChildren: 0.2 },
+    },
+  };
 
   const menuItemVariants = {
     closed: { opacity: 0, y: -10 },
-    open: { opacity: 1, y: 0 }
-  }
+    open: { opacity: 1, y: 0 },
+  };
 
   //<img src="/placeholder.svg?height=40&width=40" alt="Logo" className="h-10 w-10 mr-2" />
 
@@ -25,16 +29,26 @@ export default function Navigation() {
         <div className="container mx-auto px-4">
           <div className="flex justify-between items-center py-4">
             <div className="flex items-center">
-
               <MountainIcon className="h-6 w-6 text-purple-500" />
-              <span className="font-bold text-xl px-2"><span className="text-purple-500">SEO AI</span>GENCY</span>
+              <span className="font-bold text-xl px-2">
+                <span className="text-purple-500">SEO AI</span>GENCY
+              </span>
             </div>
             <div className="hidden md:flex space-x-4 font-medium">
-              <a href="#" className="text-gray-800 hover:text-gray-600">Services</a>
-              <a href="#" className="text-gray-800 hover:text-gray-600">About</a>
-              <a href="#" className="text-gray-800 hover:text-gray-600">Contact</a>
+              <a href="#" className="text-gray-800 hover:text-gray-600">
+                Services
+              </a>
+              <a href="#" className="text-gray-800 hover:text-gray-600">
+                About
+              </a>
+              <a href="#" className="text-gray-800 hover:text-gray-600">
+                Contact
+              </a>
             </div>
-            <button className="md:hidden" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+            <button
+              className="md:hidden"
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+            >
               {isMenuOpen ? <X /> : <Menu />}
             </button>
           </div>
@@ -88,7 +102,7 @@ export default function Navigation() {
         )}
       </AnimatePresence>
     </>
-  )
+  );
 }
 
 function MountainIcon(props: any) {
@@ -107,5 +121,5 @@ function MountainIcon(props: any) {
     >
       <path d="m8 3 4 8 5-5 5 15H2L8 3z" />
     </svg>
-  )
+  );
 }
