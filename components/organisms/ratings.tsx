@@ -7,7 +7,6 @@ import {
   CardTitle,
 } from '@/components/ui/card';
 import { Star } from 'lucide-react';
-import { title } from 'process';
 
 export default function Ratings() {
   const fadeInUp = {
@@ -43,28 +42,22 @@ export default function Ratings() {
           {[
             {
               title: 'Markus Fischer, Gründer von FischerTech Innovations',
-              image: [
-                'public/images/unsplash.jpg?height=300&width=400',
-              ],
+              image: ['public/images/unsplash.jpg?height=300&width=400'],
               description:
-                "Nach der Umsetzung der SEO AIgency-Strategien stieg der Traffic unserer Website um 150 %.",
+                'Nach der Umsetzung der SEO AIgency-Strategien stieg der Traffic unserer Website um 150 %.',
             },
             {
               title: 'Anna Weber, CEO von Berlin Webworks',
-              image: [
-                'public/images/unsplash.jpg?height=300&width=400'
-              ],
+              image: ['public/images/unsplash.jpg?height=300&width=400'],
               description:
-                "Dank des innovativen Ansatzes von SEO AIgency sind unsere organischen Suchergebnisse in die Höhe geschnellt. Wir haben innerhalb von nur zwei Monaten einen Anstieg der Leads um 200 % verzeichnet!",
+                'Dank des innovativen Ansatzes von SEO AIgency sind unsere organischen Suchergebnisse in die Höhe geschnellt. Wir haben innerhalb von nur zwei Monaten einen Anstieg der Leads um 200 % verzeichnet!',
             },
             {
               title: 'Lukas Schmidt, Marketing Director von DACH Solutions',
-              image: [
-                'public/images/unsplash.jpg?height=300&width=400'
-              ],
+              image: ['public/images/unsplash.jpg?height=300&width=400'],
               description:
-                "Die von SEO AIgency umgesetzten KI-gesteuerten Strategien haben nicht nur unsere Sichtbarkeit erhöht, sondern auch unser Nutzerengagement deutlich verbessert. Wir sind mit den Ergebnissen mehr als zufrieden."
-            }
+                'Die von SEO AIgency umgesetzten KI-gesteuerten Strategien haben nicht nur unsere Sichtbarkeit erhöht, sondern auch unser Nutzerengagement deutlich verbessert. Wir sind mit den Ergebnissen mehr als zufrieden.',
+            },
           ].map((rating, index) => (
             <motion.div key={index} variants={fadeInUp}>
               <Card className="h-full border-0 shadow-lg">
@@ -77,14 +70,10 @@ export default function Ratings() {
                       />
                     ))}
                   </CardTitle>
-                  <CardDescription>
-                    {rating.title}
-                  </CardDescription>
+                  <CardDescription>{rating.title}</CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <p>
-                    {rating.description}
-                  </p>
+                  <p>{rating.description}</p>
                 </CardContent>
               </Card>
             </motion.div>
