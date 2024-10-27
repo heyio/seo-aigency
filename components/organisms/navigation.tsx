@@ -31,7 +31,7 @@ export default function Navigation() {
             <div className="flex items-center">
               <MountainIcon className="h-6 w-6 text-purple-500" />
               <span className="font-bold text-xl px-2">
-                <span className="text-purple-500">SEO AI</span>GENCY
+                <span className="text-purple-500">SEO Ai</span>gency
               </span>
             </div>
             <div className="hidden md:flex space-x-4 font-medium">

@@ -3,6 +3,14 @@ import { Button } from '@/components/ui/button'
 import BlurIn from '../ui/blur-in'
 import { Input } from '../ui/input'
 import { Search } from 'lucide-react';
+import { useState } from 'react'
+import { Progress } from "@/components/ui/progress"
+import { CheckCircle, ArrowRight, Loader2 } from 'lucide-react'
+
+type ResultsType = {
+  score: number;
+  improvements: string[];
+} | null;
 
 export default function Hero() {
   const fadeInUp = {
@@ -19,9 +27,129 @@ export default function Hero() {
     }
   }
 
+  const [step, setStep] = useState(0)
+  const [url, setUrl] = useState('')
+  const [analyzing, setAnalyzing] = useState(false)
+  const [results, setResults] = useState<ResultsType>(null)
+
+  const testimonials = [
+    { name: "Sigmund Dornbirn", company: "Tech Co", text: "Diese SEO-Analyse hat unsere Online-Präsenz verändert!" },
+    { name: "Janette Schmidt", company: "E-commerce Ltd", text: "Unser Traffic ist nach der Umsetzung der Empfehlungen um 200 % gestiegen." },
+    { name: "Michael Johann", company: "Lokales Unternehmen", text: "Die gewonnenen Erkenntnisse waren von unschätzbarem Wert für unsere lokale SEO-Strategie." }
+  ]
+
+  const analyzeWebsite = async () => {
+    setAnalyzing(true)
+    // Simulate analysis process
+    await new Promise(resolve => setTimeout(resolve, 5000))
+    setResults({
+      score: 75,
+      improvements: [
+        "Optimierung der Meta-Beschreibungen",
+        "Ladegeschwindigkeit der Seite verbessern",
+        "Backlinks aus seriösen Quellen erhöhen"
+      ]
+    })
+    setAnalyzing(false)
+    setStep(2)
+  }
+
+  const renderStep = () => {
+    switch (step) {
+      case 0:
+        return (
+          <div className="w-full">
+            <motion.div variants={fadeInUp} className="max-w-md mx-auto mb-8 px-4 py-4">
+              <p className="text-xl pb-6">Geben Sie die URL Ihrer Website ein:</p>
+              <div className="relative">
+                <Search className="absolute left-3 top-3 transform text-gray-400" />
+                <Input
+                  placeholder="https://meinewebsite.com"
+                  value={url}
+                  onChange={(e) => setUrl(e.target.value)}
+                  className="pl-10 pr-4 py-6 w-full rounded-full font-bold text-xl border-gray-300 focus:border-black focus:ring-black mb-8"
+                />
+                <motion.div
+                  className="inline-flex items-center text-primary-foreground rounded-full text-lg font-semibold shadow-lg hover:bg-primary/90 transition-colors duration-300 mb-8"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  variants={fadeInUp}
+                >
+                  <Button onClick={() => setStep(1)} disabled={!url} className="text-xl font-bold rounded-full p-8 bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white">
+                    Website analysieren
+                  </Button>
+                </motion.div>
+              </div>
+            </motion.div>
+
+          </div>
+        )
+      case 1:
+        return (
+          <div className="w-full">
+            <p className="text-xl">Bitte warten Sie, während wir eine umfassende SEO-Analyse durchführen</p>
+            <Progress value={analyzing ? 66 : 100} className="w-full mb-4" />
+            <div className="space-y-4">
+              {testimonials.map((testimonial, index) => (
+                <div key={index} className="bg-muted p-4 rounded-lg">
+                  <p className="text-sm italic mb-2">&quot;{testimonial.text}&quot;</p>
+                  <p className="text-xs font-semibold">{testimonial.name}, {testimonial.company}</p>
+                </div>
+              ))}
+            </div>
+            <Button onClick={analyzeWebsite} disabled={analyzing} className="text-xl font-bold rounded-full p-8 bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white mt-6">
+              {analyzing ? <Loader2 className="mr-2 h-4 w-4 animate-spin" /> : <ArrowRight className="mr-2 h-4 w-4" />}
+              {analyzing ? 'Analysiere...' : 'Analyse abschliessen'}
+            </Button>
+          </div>
+        )
+      case 2:
+        return (
+          <div className="w-full">
+            <h2 className="text-2xl pb-4">Ihre SEO-Ergebnisse</h2>
+            <p className="text-xl">So schneidet Ihre Website ab</p>
+            <div className="text-center my-4">
+              <span className="text-4xl font-bold">{results?.score}</span>
+              <span className="text-2xl">/100</span>
+            </div>
+            <h3 className="font-semibold mb-2">Vorgeschlagene Verbesserungen:</h3>
+            <div>
+              {results?.improvements.map((improvement, index) => (
+                <p key={index} className="text-md py-1">{improvement}</p>
+              ))}
+            </div>
+
+            <Button onClick={() => setStep(3)} className="text-xl font-bold rounded-full p-8 bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white mt-6">Vollständigen Bericht ansehen</Button>
+          </div>
+        )
+      case 3:
+        return (
+          <div className="w-full">
+            <h2 className="text-2xl pb-4">Erschließen Sie Ihr volles SEO-Potenzial</h2>
+            <p className="text-xl mb-6">Erhalten Sie Zugang zu Ihrem umfassenden SEO-Bericht und Ihrer persönlichen Strategie</p>
+            <div className="space-y-3 inline-block">
+              <div className="flex items-center">
+                <CheckCircle className="mr-2 h-4 w-4 text-green-500" />
+                <span className="text-md">Detaillierte SEO-Analyse</span>
+              </div>
+              <div className="flex items-center">
+                <CheckCircle className="mr-2 h-4 w-4 text-green-500" />
+                <span className="text-md">Personalisierter Plan zur Verbesserung</span>
+              </div>
+              <div className="flex items-center">
+                <CheckCircle className="mr-2 h-4 w-4 text-green-500" />
+                <span className="text-md">30-Tage-Aktionsplan</span>
+              </div>
+            </div>
+            <Button className="text-xl font-bold rounded-full p-8 bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white mt-6">Ihren Bericht und Leitfaden kaufen um EUR 99,-</Button>
+          </div>
+        )
+    }
+  }
+
   return (
     <motion.section
-      className="py-20 text-center px-4 pt-32"
+      className="py-10 text-center px-4 pt-32"
       initial="initial"
       animate="animate"
       variants={staggerChildren}
@@ -36,27 +164,10 @@ export default function Hero() {
         Steigern Sie Ihre Besucherzahlen, gewinnen Sie mehr Kunden und lassen Sie Ihr Unternehmen mit unseren SEO-Diensten wachsen.
       </motion.p>
 
-      <motion.div variants={fadeInUp} className="max-w-md mx-auto mb-8 px-4">
-        <div className="relative">
-          <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" />
-          <Input 
-            type="text" 
-            placeholder="https://" 
-            className="pl-10 pr-4 py-6 w-full rounded-full font-bold text-xl border-gray-300 focus:border-black focus:ring-black"
-          />
-        </div>
-      </motion.div>
-      <motion.a
-            href="#"
-            className="inline-flex items-center text-primary-foreground rounded-full text-lg font-semibold shadow-lg hover:bg-primary/90 transition-colors duration-300 mb-8"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            variants={fadeInUp}
-            >
-        <Button className="text-xl font-bold rounded-full p-8 bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white">
-        Website analysieren
-        </Button>
-      </motion.a>      
+      <div className="max-w-xl mx-auto mb-8">
+        {renderStep()}
+      </div>
+
     </motion.section>
   )
 }
