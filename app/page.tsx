@@ -14,6 +14,7 @@ import Pricing from '../components/organisms/pricing';
 import FAQ from '../components/organisms/faq';
 import Footer from '../components/organisms/footer';
 import TwoColumnSection from '@/components/organisms/twocolumnsection';
+import Newsletter from '@/components/organisms/newsletter';
 
 export default function LandingPage() {
   const [selectedPlan, setSelectedPlan] = useState('basic');
@@ -22,6 +23,7 @@ export default function LandingPage() {
     <div className="min-h-screen">
       <Navigation />
       <Hero />
+      <Newsletter />
       <Services />
       <GoogleRanking />
       <TwoColumnSection />
