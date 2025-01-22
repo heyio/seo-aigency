@@ -47,7 +47,6 @@ export async function POST(req: NextRequest) {
   };
 
   // 6. Send POST request to Mailchimp API
-  console.log({ url, data, options });
   try {
     const response = await axios.post(url, data, options);
     if (response.status == 200) {
