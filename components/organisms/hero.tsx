@@ -156,12 +156,12 @@ export default function Hero() {
     >
       <motion.div className="" variants={fadeInUp}>
         <BlurIn
-          word="Boosten Sie Ihre Online-Präsenz"
+          word="Booste deine Conversions mit SEO"
           className="text-7xl font-bold mb-4 bg-gradient-to-b from-indigo-400 to-purple-500 inline-block text-transparent bg-clip-text"
         />
       </motion.div>
       <motion.p className="text-2xl mb-16 px-4 max-w-3xl mx-auto" variants={fadeInUp}>
-        Steigern Sie Ihre Besucherzahlen, gewinnen Sie mehr Kunden und lassen Sie Ihr Unternehmen mit unseren SEO-Diensten wachsen.
+        Steigere Besucherzahlen, gewinne mehr Kunden und lass dein Unternehmen mit unseren SEO-Diensten wachsen.
       </motion.p>
 
       <div className="max-w-xl mx-auto mb-8">
