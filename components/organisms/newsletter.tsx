@@ -2,7 +2,7 @@ import { FormEvent, useState } from 'react';
 import axios from 'axios';
 
 const Newsletter = () => {
-  const [email, setEmail] = useState<string>('miro.grujin@hotmail.com');
+  const [email, setEmail] = useState<string>('');
   const [status, setStatus] = useState<
     'success' | 'error' | 'loading' | 'idle'
   >('idle');
@@ -36,27 +36,29 @@ const Newsletter = () => {
 
   return (
     <>
+      <div className="text-2xl px-4 max-w-3xl mx-auto">
+        Werde benachrichtigt wenn du SEO AIgency nutzen kannst:
+      </div>
       <form
         className="rounded px-8 pt-6 pb-8 mb-4 max-w-md"
         onSubmit={handleSubscribe}
       >
-        <div className="flex">
+        <div className="flex flex-col gap-4 items-center">
           <input
-            className={`grow mr-1 transition ease-out delay-75 focus-within:border-2 focus-within:border-purple-600 items-center h-14 pr-0.5 rounded caret-purple-700 outline-none px-4 disabled:border-slate-400 border ${
-              statusCode == 400 ? 'border-orange-500' : 'border-purple-600'
-            } `}
+            className={`grow mr-1 transition ease-out delay-75 focus-within:border-2 focus-within:border-purple-600 items-center h-14 pr-0.5 rounded-full w-full caret-purple-700 outline-none px-4 disabled:border-slate-400 border ${statusCode == 400 ? 'border-orange-500' : 'border-purple-600'
+              } `}
             type="email"
-            placeholder="What is your email address?"
+            placeholder="Deine Email Adresse"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             disabled={status == 'loading'}
           />
           <button
-            className="bg-violet-700 hover:bg-violet-500 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline disabled:bg-slate-400"
+            className="bg-violet-700 hover:bg-violet-500 text-white font-bold py-4 px-4 rounded-full w-64 focus:outline-none focus:shadow-outline disabled:bg-slate-400"
             type="submit"
             disabled={status == 'loading'}
           >
-            Subscribe
+            Newsletter bestellen
           </button>
         </div>
         <div className="server-message pt-4 text-green-600">

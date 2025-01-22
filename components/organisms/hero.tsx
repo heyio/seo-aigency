@@ -6,6 +6,7 @@ import { Search } from 'lucide-react';
 import { useState } from 'react'
 import { Progress } from "@/components/ui/progress"
 import { CheckCircle, ArrowRight, Loader2 } from 'lucide-react'
+import Newsletter from './newsletter';
 
 type ResultsType = {
   score: number;
@@ -60,28 +61,8 @@ export default function Hero() {
         return (
           <div className="w-full">
             <motion.div variants={fadeInUp} className="max-w-md mx-auto mb-8 px-4 py-4">
-              <p className="text-xl pb-6">Geben Sie die URL Ihrer Website ein:</p>
-              <div className="relative">
-                <Search className="absolute left-3 top-3 transform text-gray-400" />
-                <Input
-                  placeholder="https://meinewebsite.com"
-                  value={url}
-                  onChange={(e) => setUrl(e.target.value)}
-                  className="pl-10 pr-4 py-6 w-full rounded-full font-bold text-xl border-gray-300 focus:border-black focus:ring-black mb-8"
-                />
-                <motion.div
-                  className="inline-flex items-center text-primary-foreground rounded-full text-lg font-semibold shadow-lg hover:bg-primary/90 transition-colors duration-300 mb-8"
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  variants={fadeInUp}
-                >
-                  <Button onClick={() => setStep(1)} disabled={!url} className="text-xl font-bold rounded-full p-8 bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white">
-                    Website analysieren
-                  </Button>
-                </motion.div>
-              </div>
+              <Newsletter />
             </motion.div>
-
           </div>
         )
       case 1:

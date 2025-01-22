@@ -23,8 +23,7 @@ export default function LandingPage() {
     <div className="min-h-screen">
       <Navigation />
       <Hero />
-      <Newsletter />
-      <Services />
+      {/* <Services />
       <GoogleRanking />
       <TwoColumnSection />
       <Testimonials />
@@ -33,7 +32,7 @@ export default function LandingPage() {
       <DriveCustomers />
       <WhyChooseUs />
       <Pricing selectedPlan={selectedPlan} setSelectedPlan={setSelectedPlan} />
-      <FAQ />
+      <FAQ /> */}
       <Footer />
     </div>
   );
