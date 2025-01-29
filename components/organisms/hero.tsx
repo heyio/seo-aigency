@@ -180,10 +180,7 @@ export default function Hero() {
       animate="animate"
       variants={staggerChildren}
     >
-      <h1 className="inline animate-gradient bg-gradient-to-r from-[#ffaa40] via-[#9c40ff] to-[#ffaa40] bg-[length:var(--bg-size)_100%] bg-clip-text text-transparent">
-        hello world
-      </h1>
-      <motion.div variants={fadeInUp}>
+      <motion.div className="" variants={fadeInUp}>
         <BlurIn
           word="Die SEO-Lösung für Web Agenturen"
           className="text-6xl font-bold mb-10 bg-gradient-to-b from-indigo-400 to-purple-500 text-transparent inline-block bg-clip-text"
