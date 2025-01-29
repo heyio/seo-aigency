@@ -182,8 +182,8 @@ export default function Hero() {
     >
       <motion.div className="" variants={fadeInUp}>
         <BlurIn
-          word="Die SEO-Lösung für Agenturen & WebentwicklerInnen"
-          className="text-7xl font-bold mb-4 bg-gradient-to-b from-indigo-400 to-purple-500 inline-block text-transparent bg-clip-text"
+          word="Die SEO-Lösung für Web Agenturen"
+          className="text-7xl font-bold mb-10 bg-gradient-to-b from-indigo-400 to-purple-500 text-transparent inline-block bg-clip-text"
         />
       </motion.div>
       <motion.p className="text-2xl mb-16 px-4 max-w-3xl mx-auto" variants={fadeInUp}>
