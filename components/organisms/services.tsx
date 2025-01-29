@@ -40,13 +40,13 @@ export default function Services() {
           <li className="text-center text-xl font-semibold">
             <strong>Verwalte mehrere Projekte</strong>
             <ul className="ps-5 mt-2 space-y-1 list-inside font-normal">
-              <li>Mit SEO AIgency behältst du mehrere SEO Projekte im Überblick.</li>
+              <li>Mit SEO AIgency behältst du mehrere SEO Projekte leicht im Überblick.</li>
             </ul>
           </li>
           <li className="text-center text-xl font-semibold">
             <strong>Technische Optimierung</strong>
             <ul className="ps-5 mt-2 space-y-1 list-inside font-normal">
-              <li>Vorschläge für technische Optimierungen, die du spielerisch durchführen kannst.</li>
+              <li>Du erhältst technische Optimierungen, die du spielerisch durchführen kannst.</li>
             </ul>
           </li>
           <li className="text-center text-xl font-semibold">
@@ -58,7 +58,7 @@ export default function Services() {
           <li className="text-center text-xl font-semibold">
             <strong>Inhaltliche Optimierung</strong>
             <ul className="ps-5 mt-2 space-y-1 list-inside font-normal">
-              <li>Optimiere bestehende Inhalte auf deiner Website.</li>
+              <li>Optimiere bestehende Inhalte auf deiner Website durch Vorschläge von SEO Aigency.</li>
             </ul>
           </li>
           <li className="text-center text-xl font-semibold">
