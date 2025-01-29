@@ -37,7 +37,7 @@ const Newsletter = () => {
   return (
     <>
       <div className="text-2xl pt-4 max-w-2xl mx-auto">
-        Werde benachrichtigt, sobald SEO AIgency verfügbar ist:
+        Werde benachrichtigt, sobald SEO Aigency verfügbar ist:
       </div>
       <form
         className="rounded px-8 pt-6 pb-8 mb-4 max-w-md"
