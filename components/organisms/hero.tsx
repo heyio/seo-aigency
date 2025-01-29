@@ -187,7 +187,7 @@ export default function Hero() {
         />
       </motion.div>
       <motion.p className="text-2xl mb-16 px-4 max-w-3xl mx-auto" variants={fadeInUp}>
-        Verwalte mühelos mehrere Kundenprojekte, verbessere Rankings, steigere Conversions und werde von AI's empfohlen – mit smarter SEO.
+        Verwalte mühelos mehrere Kundenprojekte, verbessere Rankings, steigere Conversions und werde von AI&apos;s empfohlen – mit smarter SEO.
       </motion.p>
       <div className="max-w-xl mx-auto mb-8">{renderStep()}</div>
     </motion.section>
