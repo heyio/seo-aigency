@@ -68,7 +68,7 @@ export default function Services() {
             </ul>
           </li>
           <li className="text-center text-xl font-semibold">
-            <strong>Optimierung für die Ecmpfehlung von AI Chatbots wie ChatGPT</strong>
+            <strong>Optimierung für die Empfehlung von AI Chatbots wie ChatGPT</strong>
             <ul className="ps-5 mt-2 spae-y-1 list-inside font-normal">
               <li>Unsere Lösung optimiert Inhalte der Kundenwebseiten so, dass AI Chatbots wie ChatGPT sie empfehlen.</li>
             </ul>
