@@ -1,10 +1,10 @@
-import { motion } from 'framer-motion';
-import { Button } from '@/components/ui/button';
-import BlurIn from '../ui/blur-in';
-import { useState } from 'react';
-import { Progress } from '@/components/ui/progress';
-import { CheckCircle, ArrowRight, Loader2 } from 'lucide-react';
-import Newsletter from './newsletter';
+import { motion } from "framer-motion";
+import { Button } from "@/components/ui/button";
+import BlurIn from "../ui/blur-in";
+import { useState } from "react";
+import { Progress } from "@/components/ui/progress";
+import { CheckCircle, ArrowRight, Loader2 } from "lucide-react";
+import Newsletter from "./newsletter";
 
 type ResultsType = {
   score: number;
@@ -32,19 +32,19 @@ export default function Hero() {
 
   const testimonials = [
     {
-      name: 'Sigmund Dornbirn',
-      company: 'Tech Co',
-      text: 'Diese SEO-Analyse hat unsere Online-Präsenz verändert!',
+      name: "Sigmund Dornbirn",
+      company: "Tech Co",
+      text: "Diese SEO-Analyse hat unsere Online-Präsenz verändert!",
     },
     {
-      name: 'Janette Schmidt',
-      company: 'E-commerce Ltd',
-      text: 'Unser Traffic ist nach der Umsetzung der Empfehlungen um 200 % gestiegen.',
+      name: "Janette Schmidt",
+      company: "E-commerce Ltd",
+      text: "Unser Traffic ist nach der Umsetzung der Empfehlungen um 200 % gestiegen.",
     },
     {
-      name: 'Michael Johann',
-      company: 'Lokales Unternehmen',
-      text: 'Die gewonnenen Erkenntnisse waren von unschätzbarem Wert für unsere lokale SEO-Strategie.',
+      name: "Michael Johann",
+      company: "Lokales Unternehmen",
+      text: "Die gewonnenen Erkenntnisse waren von unschätzbarem Wert für unsere lokale SEO-Strategie.",
     },
   ];
 
@@ -55,9 +55,9 @@ export default function Hero() {
     setResults({
       score: 75,
       improvements: [
-        'Optimierung der Meta-Beschreibungen',
-        'Ladegeschwindigkeit der Seite verbessern',
-        'Backlinks aus seriösen Quellen erhöhen',
+        "Optimierung der Meta-Beschreibungen",
+        "Ladegeschwindigkeit der Seite verbessern",
+        "Backlinks aus seriösen Quellen erhöhen",
       ],
     });
     setAnalyzing(false);
@@ -107,7 +107,7 @@ export default function Hero() {
               ) : (
                 <ArrowRight className="mr-2 h-4 w-4" />
               )}
-              {analyzing ? 'Analysiere...' : 'Analyse abschliessen'}
+              {analyzing ? "Analysiere..." : "Analyse abschliessen"}
             </Button>
           </div>
         );
@@ -180,14 +180,21 @@ export default function Hero() {
       animate="animate"
       variants={staggerChildren}
     >
-      <motion.div className="" variants={fadeInUp}>
+      <h1 className="inline animate-gradient bg-gradient-to-r from-[#ffaa40] via-[#9c40ff] to-[#ffaa40] bg-[length:var(--bg-size)_100%] bg-clip-text text-transparent">
+        hello world
+      </h1>
+      <motion.div variants={fadeInUp}>
         <BlurIn
           word="Die SEO-Lösung für Agenturen & WebentwicklerInnen"
           className="text-7xl font-bold mb-4 bg-gradient-to-b from-indigo-400 to-purple-500 inline-block text-transparent bg-clip-text"
         />
       </motion.div>
-      <motion.p className="text-2xl mb-16 px-4 max-w-3xl mx-auto" variants={fadeInUp}>
-        Verwalte mühelos mehrere Kundenprojekte, verbessere Rankings, steigere Conversions und werde von AI&apos;s empfohlen – mit smarter SEO.
+      <motion.p
+        className="text-2xl mb-16 px-4 max-w-3xl mx-auto"
+        variants={fadeInUp}
+      >
+        Verwalte mühelos mehrere Kundenprojekte, verbessere Rankings, steigere
+        Conversions und werde von AI&apos;s empfohlen – mit smarter SEO.
       </motion.p>
       <div className="max-w-xl mx-auto mb-8">{renderStep()}</div>
     </motion.section>
