@@ -38,6 +38,12 @@ export default function Services() {
             </ul>
           </li>
           <li className="text-center text-xl font-semibold">
+            <strong>Verwalte mehrere Projekte</strong>
+            <ul className="ps-5 mt-2 space-y-1 list-inside font-normal">
+              <li>Mit SEO AIgency behältst du mehrere SEO Projekte im Überblick.</li>
+            </ul>
+          </li>
+          <li className="text-center text-xl font-semibold">
             <strong>Technische Optimierung</strong>
             <ul className="ps-5 mt-2 space-y-1 list-inside font-normal">
               <li>Vorschläge für technische Optimierungen, die du spielerisch durchführen kannst.</li>
@@ -59,6 +65,12 @@ export default function Services() {
             <strong>Keyword Check</strong>
             <ul className="ps-5 mt-2 space-y-1 list-inside font-normal">
               <li>Definiere Keywords und optimiere deine Inhalte, inklusive einer Keyword-Analyse der Konkurrenz.</li>
+            </ul>
+          </li>
+          <li className="text-center text-xl font-semibold">
+            <strong>Optimierung für die Ecmpfehlung von AI Chatbots wie ChatGPT</strong>
+            <ul className="ps-5 mt-2 spae-y-1 list-inside font-normal">
+              <li>Unsere Lösung optimiert Inhalte der Kundenwebseiten so, dass AI Chatbots wie ChatGPT sie empfehlen.</li>
             </ul>
           </li>
           <li className="text-center text-xl font-semibold">
