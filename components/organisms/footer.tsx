@@ -30,21 +30,19 @@ export default function Footer() {
             <p>Wir boosten Online Präsenzen seit 2016</p>
           </motion.div>
           <motion.div variants={fadeInUp}>
-            <h3 className="text-lg font-bold mb-4">Contact Us</h3>
-            <p>Email: info@seo-aigency.com</p>
-            <p>Phone: +43 699 456-7890</p>
+            <h3 className="text-lg font-bold mb-4">Kontakt</h3>
+            <p>Email: <a href="mailto:hello@seo-aigency.com">hello@seo-aigency.com</a></p>
+            <p>Mariahilfer Strasse 101/1/21, 1060 Wien</p>
           </motion.div>
           <motion.div variants={fadeInUp}>
-            <h3 className="text-lg font-bold mb-4">Follow Us</h3>
+            <h3 className="text-lg font-bold mb-4">Folge uns</h3>
             <div className="flex space-x-4">
-              <a href="#" className="hover:text-blue-400">Twitter</a>
-              <a href="#" className="hover:text-blue-600">Facebook</a>
-              <a href="#" className="hover:text-pink-600">Instagram</a>
+              <a href="#" className="hover:text-blue-400">Socials kommen bald!</a>
             </div>
           </motion.div>
         </div>
         <motion.div className="mt-8 text-center" variants={fadeInUp}>
-          <p>&copy; 2024 SEO AIGENCY. Alle rechte vorbehalten.</p>
+          <p>&copy; 2025 SEO AIGENCY. Alle rechte vorbehalten.</p>
         </motion.div>
       </div>
     </motion.footer>

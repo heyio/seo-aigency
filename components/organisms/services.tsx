@@ -23,19 +23,51 @@ export default function Services() {
       viewport={{ once: true }}
       variants={staggerChildren}
     >
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto p-8">
         <motion.h2
           className="text-4xl font-bold mb-8 text-center"
           variants={fadeInUp}
         >
-          Unsere SEO-Dienstleistungen
+          Wie funktioniert SEO Aigency?
         </motion.h2>
-        <motion.p
-          className="text-lg mb-8 text-center max-w-2xl mx-auto"
-          variants={fadeInUp}
-        >
-          {`Wir bieten umfassende SEO-Unterstützung und verwenden modernste Techniken, um die Sichtbarkeit und das Ranking Ihrer Website zu verbessern.`}
-        </motion.p>
+        <ul className="space-y-6 text-left text-gray-500 dark:text-gray-400">
+          <li className="text-center text-xl font-semibold">
+            <strong>Website Audit</strong>
+            <ul className="ps-5 mt-2 space-y-1 list-inside font-normal">
+              <li>Gib deine Website-URL ein und erhalte eine erste SEO-Analyse mit Page Speed Insights.</li>
+            </ul>
+          </li>
+          <li className="text-center text-xl font-semibold">
+            <strong>Technische Optimierung</strong>
+            <ul className="ps-5 mt-2 space-y-1 list-inside font-normal">
+              <li>Vorschläge für technische Optimierungen, die du spielerisch durchführen kannst.</li>
+            </ul>
+          </li>
+          <li className="text-center text-xl font-semibold">
+            <strong>Technischer Deep Check</strong>
+            <ul className="ps-5 mt-2 space-y-1 list-inside font-normal">
+              <li>Führe einen technischen Deep-Check durch und erhalte Vorschläge zur Optimierung von Elementen und dem Aufbau auf deiner Website.</li>
+            </ul>
+          </li>
+          <li className="text-center text-xl font-semibold">
+            <strong>Inhaltliche Optimierung</strong>
+            <ul className="ps-5 mt-2 space-y-1 list-inside font-normal">
+              <li>Optimiere bestehende Inhalte auf deiner Website.</li>
+            </ul>
+          </li>
+          <li className="text-center text-xl font-semibold">
+            <strong>Keyword Check</strong>
+            <ul className="ps-5 mt-2 space-y-1 list-inside font-normal">
+              <li>Definiere Keywords und optimiere deine Inhalte, inklusive einer Keyword-Analyse der Konkurrenz.</li>
+            </ul>
+          </li>
+          <li className="text-center text-xl font-semibold">
+            <strong>Human Check</strong>
+            <ul className="ps-5 mt-2 space-y-1 list-inside font-normal">
+              <li>Buche live Human Support via Video-Call für individuelle Unterstützung.</li>
+            </ul>
+          </li>
+        </ul>
       </div>
     </motion.section>
   );

@@ -36,8 +36,8 @@ const Newsletter = () => {
 
   return (
     <>
-      <div className="text-2xl px-4 max-w-3xl mx-auto">
-        Werde benachrichtigt wenn du SEO AIgency nutzen kannst:
+      <div className="text-2xl pt-4 max-w-2xl mx-auto">
+        Werde benachrichtigt, sobald SEO AIgency verfügbar ist:
       </div>
       <form
         className="rounded px-8 pt-6 pb-8 mb-4 max-w-md"
@@ -58,7 +58,7 @@ const Newsletter = () => {
             type="submit"
             disabled={status == 'loading'}
           >
-            Newsletter bestellen
+            Newsletter abonnieren
           </button>
         </div>
         <div className="server-message pt-4 text-green-600">

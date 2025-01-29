@@ -175,25 +175,20 @@ export default function Hero() {
 
   return (
     <motion.section
-      className="py-10 text-center px-4 pt-32"
+      className="text-center px-4 pt-32 pb-4"
       initial="initial"
       animate="animate"
       variants={staggerChildren}
     >
       <motion.div className="" variants={fadeInUp}>
         <BlurIn
-          word="Booste deine Conversions mit SEO"
+          word="Die SEO-Lösung für Agenturen & WebentwicklerInnen"
           className="text-7xl font-bold mb-4 bg-gradient-to-b from-indigo-400 to-purple-500 inline-block text-transparent bg-clip-text"
         />
       </motion.div>
-      <motion.p
-        className="text-2xl mb-16 px-4 max-w-3xl mx-auto"
-        variants={fadeInUp}
-      >
-        Steigere Besucherzahlen, gewinne mehr Kunden und lass dein Unternehmen
-        mit unseren SEO-Diensten wachsen.
+      <motion.p className="text-2xl mb-16 px-4 max-w-3xl mx-auto" variants={fadeInUp}>
+        Verwalte mühelos mehrere Kundenprojekte, verbessere Rankings, steigere Conversions und werde von AI's empfohlen – mit smarter SEO.
       </motion.p>
-
       <div className="max-w-xl mx-auto mb-8">{renderStep()}</div>
     </motion.section>
   );

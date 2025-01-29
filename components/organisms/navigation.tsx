@@ -35,13 +35,13 @@ export default function Navigation() {
               </span>
             </div>
             <div className="hidden md:flex space-x-4 font-medium">
-              <a href="#" className="text-gray-800 hover:text-gray-600">
+              {/* <a href="#" className="text-gray-800 hover:text-gray-600">
                 Services
-              </a>
-              <a href="#" className="text-gray-800 hover:text-gray-600">
+              </a> */}
+              {/* <a href="#" className="text-gray-800 hover:text-gray-600">
                 Über uns
-              </a>
-              <a href="#" className="text-gray-800 hover:text-gray-600">
+              </a> */}
+              <a href="mailto:hello@seo-aigency.com" className="text-gray-800 hover:text-gray-600">
                 Kontakt
               </a>
             </div>
