@@ -34,7 +34,7 @@ export default function FAQ() {
 
   return (
     <motion.section
-      className="py-16 bg-gray-50"
+      className="py-16"
       initial="initial"
       whileInView="animate"
       viewport={{ once: true }}
