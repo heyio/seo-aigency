@@ -27,7 +27,7 @@ export default function FAQ() {
     { question: "How do you measure SEO success?", answer: "We track various metrics including organic traffic, keyword rankings, conversion rates, and ROI to measure the success of our SEO campaigns." },
     { question: "Do you offer local SEO services?", answer: "Yes, we offer local SEO services to help businesses improve their visibility in local search results." },
     { question: "Can you help with e-commerce SEO?", answer: "We have extensive experience in optimizing e-commerce websites to improve product visibility and increase sales." },
-    { question: "How often will I receive progress reports?", answer: "We provide detailed monthly reports, but you'll have access to real-time dashboards to track your progress at any time." },
+    { question: "How often will I receive progress reports?", answer: "We provide detailed reports on a weekly basis, since we think this interval is most effective, but you'll have access to real-time dashboards to track your progress at any time." },
     { question: "Do you offer content creation services?", answer: "Yes, we offer content creation services as part of our SEO packages. This includes blog posts, articles, and other types of content." },
     { question: "What makes your SEO agency different from others?", answer: "We combine cutting-edge SEO techniques with personalized strategies and exceptional customer service to deliver outstanding results for our clients." }
   ]
