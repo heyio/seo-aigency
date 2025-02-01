@@ -36,29 +36,29 @@ const Newsletter = () => {
 
   return (
     <>
-      <div className="text-2xl pt-4 max-w-2xl mx-auto">
-        Werde benachrichtigt, sobald SEO Aigency verfügbar ist:
+      <div className="text-2xl pt-4 max-w-full mx-auto">
+        Be among the first to use SEO Aigency.
       </div>
       <form
-        className="rounded px-8 pt-6 pb-8 mb-4 max-w-md"
+        className="rounded px-8 pt-6 pb-8 mb-4 max-w-md mx-auto"
         onSubmit={handleSubscribe}
       >
         <div className="flex flex-col gap-4 items-center">
           <input
-            className={`grow mr-1 transition ease-out delay-75 focus-within:border-2 focus-within:border-purple-600 items-center h-14 pr-0.5 rounded-full w-full caret-purple-700 outline-none px-4 disabled:border-slate-400 border ${statusCode == 400 ? 'border-orange-500' : 'border-purple-600'
+            className={`text-center text-xl grow transition ease-out delay-75 focus-within:border-2 focus-within:border-purple-600 items-center h-14 rounded-full w-full caret-purple-700 outline-none px-4 disabled:border-slate-400 border ${statusCode == 400 ? 'border-orange-500' : 'border-purple-600'
               } `}
             type="email"
-            placeholder="Deine Email Adresse"
+            placeholder="Your Email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             disabled={status == 'loading'}
           />
           <button
-            className="bg-violet-700 hover:bg-violet-500 text-white font-bold py-4 px-4 rounded-full w-64 focus:outline-none focus:shadow-outline disabled:bg-slate-400"
+            className="text-xl bg-violet-700 hover:bg-violet-500 text-white font-bold py-4 px-4 rounded-full w-full focus:outline-none focus:shadow-outline disabled:bg-slate-400"
             type="submit"
             disabled={status == 'loading'}
           >
-            Newsletter abonnieren
+            Subscribe Newsletter
           </button>
         </div>
         <div className="server-message pt-4 text-green-600">

@@ -28,55 +28,68 @@ export default function Services() {
           className="text-4xl font-bold mb-14 text-center"
           variants={fadeInUp}
         >
-          Wie funktioniert SEO Aigency?
+          How it works
         </motion.h2>
         <ul className="space-y-14 text-left text-gray-500 dark:text-gray-400">
           <li className="text-center text-2xl font-semibold">
             <strong>Website Audit</strong>
             <ul className="ps-5 mt-2 space-y-1 list-inside font-normal">
-              <li>Gib deine Website-URL ein und erhalte eine erste SEO-Analyse mit Page Speed Insights.</li>
+              <li>Enter your website URL and receive a first SEO analysis with Page Speed
+                Insights.</li>
             </ul>
           </li>
           <li className="text-center text-2xl font-semibold">
-            <strong>Verwalte mehrere Projekte</strong>
+            <strong>Conveniently manage &amp; improve multiple websites</strong>
             <ul className="ps-5 mt-2 space-y-1 list-inside font-normal">
-              <li>Mit SEO AIgency behältst du mehrere SEO Projekte leicht im Überblick.</li>
+              <li>Easily manage and improve SEO and AI Search Visibility of multiple brands or websites.</li>
             </ul>
           </li>
           <li className="text-center text-2xl font-semibold">
-            <strong>Technische Optimierung</strong>
+            <strong>Technical Analysis with action steps</strong>
             <ul className="ps-5 mt-2 space-y-1 list-inside font-normal">
-              <li>Du erhältst technische Optimierungen, die du spielerisch durchführen kannst.</li>
+              <li>Receive technical optimizations that you can easily carry out.</li>
             </ul>
           </li>
           <li className="text-center text-2xl font-semibold">
-            <strong>Technischer Deep Check</strong>
+            <strong>In-depth Technical Check</strong>
             <ul className="ps-5 mt-2 space-y-1 list-inside font-normal">
-              <li>Führe einen technischen Deep-Check durch und erhalte Vorschläge zur Optimierung von Elementen und dem Aufbau auf deiner Website.</li>
+              <li>Conduct a technical deep check and receive suggestions for optimizing
+                elements and website structure.</li>
             </ul>
           </li>
           <li className="text-center text-2xl font-semibold">
-            <strong>Inhaltliche Optimierung</strong>
+            <strong>SEO Aigency supports you in defining your strategy</strong>
             <ul className="ps-5 mt-2 space-y-1 list-inside font-normal">
-              <li>Optimiere bestehende Inhalte auf deiner Website durch Vorschläge von SEO Aigency.</li>
+              <li>Create a customized strategy that aligns
+                with your business objectives.</li>
+            </ul>
+          </li>
+          <li className="text-center text-2xl font-semibold">
+            <strong>Content Optimization</strong>
+            <ul className="ps-5 mt-2 space-y-1 list-inside font-normal">
+              <li>Examine your existing content and
+                provide practical recommendations to improve your search ranking and visibilty for AI Search Engines.</li>
             </ul>
           </li>
           <li className="text-center text-2xl font-semibold">
             <strong>Keyword Check</strong>
             <ul className="ps-5 mt-2 space-y-1 list-inside font-normal">
-              <li>Definiere Keywords und optimiere deine Inhalte, inklusive einer Keyword-Analyse der Konkurrenz.</li>
+              <li>Enhance existing content on your website with recommendations from SEO
+                Agency aligned to your marketing strategy.</li>
             </ul>
           </li>
           <li className="text-center text-2xl font-semibold">
-            <strong>Optimierung für die Empfehlung von AI Chatbots wie ChatGPT</strong>
+            <strong>Become recommended by AI chatbots like ChatGPT</strong>
             <ul className="ps-5 mt-2 spae-y-1 list-inside font-normal">
-              <li>Unsere Lösung optimiert Inhalte der Kundenwebseiten so, dass AI Chatbots wie ChatGPT sie empfehlen.</li>
+              <li>Optimize your business so that AI chatbots like
+                ChatGPT, Gemini or Perplexity recommend it.</li>
             </ul>
           </li>
           <li className="text-center text-2xl font-semibold">
-            <strong>Human Check</strong>
+            <strong>On-demand Human Check</strong>
             <ul className="ps-5 mt-2 space-y-1 list-inside font-normal">
-              <li>Buche live Human Support via Video-Call für individuelle Unterstützung.</li>
+              <li>Our team is available to help - Book live human support via video call for
+                individualized assistance.</li>
             </ul>
           </li>
         </ul>

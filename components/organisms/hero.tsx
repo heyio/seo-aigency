@@ -71,7 +71,7 @@ export default function Hero() {
           <div className="w-full">
             <motion.div
               variants={fadeInUp}
-              className="max-w-md mx-auto mb-8 px-4 py-4"
+              className="max-w-full mx-auto mb-8 px-4 py-4"
             >
               <Newsletter />
             </motion.div>
@@ -175,25 +175,24 @@ export default function Hero() {
 
   return (
     <motion.section
-      className="text-center px-4 pt-32 pb-4"
+      className="text-center mx-auto max-w-4xl px-4 pt-32 pb-4"
       initial="initial"
       animate="animate"
       variants={staggerChildren}
     >
       <motion.div className="" variants={fadeInUp}>
         <BlurIn
-          word="Die SEO-Lösung für Web Agenturen"
+          word="Make businesses visible on Search & AI Engines"
           className="text-6xl font-bold mb-10 bg-gradient-to-b from-indigo-400 to-purple-500 text-transparent inline-block bg-clip-text"
         />
       </motion.div>
-      <motion.p
-        className="text-2xl mb-16 px-4 max-w-3xl mx-auto"
-        variants={fadeInUp}
-      >
-        Verwalte mühelos mehrere Kundenprojekte, verbessere Rankings, steigere
-        Conversions und werde von AI&apos;s empfohlen – mit smarter SEO.
+      <motion.p className="text-2xl mb-16 px-4 max-w-3xl mx-auto" variants={fadeInUp}>
+        Simply enter your website link to analyse it for free. SEO Aigency will help you to improve engine rankings, increase conversions and monitor your brand to get recommended by AI&apos;s.
       </motion.p>
-      <div className="max-w-xl mx-auto mb-8">{renderStep()}</div>
-    </motion.section>
+      <motion.p variants={fadeInUp}>
+        <img src="/hero.png" className="w-full h-full object-cover border rounded-xl"></img>
+      </motion.p>
+      <div className="max-w-full mx-auto mb-8">{renderStep()}</div>
+    </motion.section >
   );
 }

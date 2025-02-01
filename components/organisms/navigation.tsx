@@ -42,7 +42,7 @@ export default function Navigation() {
                 Über uns
               </a> */}
               <a href="mailto:hello@seo-aigency.com" className="text-gray-800 hover:text-gray-600">
-                Kontakt
+                Get in touch
               </a>
             </div>
             <button
@@ -78,7 +78,7 @@ export default function Navigation() {
                   variants={menuItemVariants}
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  Services
+                  Features
                 </motion.a>
                 <motion.a
                   href="#"
@@ -86,7 +86,7 @@ export default function Navigation() {
                   variants={menuItemVariants}
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  Über uns
+                  About us
                 </motion.a>
                 <motion.a
                   href="#"
@@ -94,7 +94,7 @@ export default function Navigation() {
                   variants={menuItemVariants}
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  Kontakt
+                  Get in touch
                 </motion.a>
               </motion.div>
             </div>
