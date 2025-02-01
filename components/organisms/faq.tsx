@@ -18,16 +18,18 @@ export default function FAQ() {
   }
 
   const faqs = [
-    { question: "Was ist SEO?", answer: "SEO steht für Suchmaschinenoptimierung. Es ist die Praxis, Ihre Website zu optimieren, um ihre Sichtbarkeit in den Suchergebnissen zu erhöhen." },
-    { question: "Wie lange dauert es, bis man Ergebnisse sieht?", answer: "SEO ist eine langfristige Strategie. Einige Verbesserungen können innerhalb weniger Wochen sichtbar sein, aber signifikante Ergebnisse dauern in der Regel 3-6 Monate." },
-    { question: "Garantieren Sie Platzierungen auf der ersten Seite?", answer: "Wir garantieren keine spezifischen Platzierungen, da Suchmaschinen ihre Algorithmen häufig aktualisieren. Wir garantieren jedoch, die Sichtbarkeit Ihrer Website und den organischen Traffic erheblich zu verbessern." },
-    { question: "Was ist in Ihren SEO-Dienstleistungen enthalten?", answer: "Unsere Dienstleistungen umfassen Keyword-Recherche, On-Page-Optimierung, Content-Erstellung, Linkaufbau und regelmäßige Leistungsberichte. Zusätzlich zu den Checks durch unseren SEO AIGENCY Service, führen wir einen SEO-Check in Ihrem gewählten Intervall durch unser engagiertes Personal durch, führen Optimierungen durch und lassen Ihnen einen Report zukommen." },
-    { question: "Wie messen Sie den SEO-Erfolg?", answer: "Wir verfolgen verschiedene Metriken wie organischen Traffic, Keyword-Rankings, Conversion-Raten und ROI (return-on-investment), um den Erfolg unserer SEO-Kampagnen zu messen." },
-    { question: "Bieten Sie lokale SEO-Dienstleistungen an?", answer: "Ja, wir bieten lokale SEO-Dienstleistungen an, um Unternehmen zu helfen, ihre Sichtbarkeit in den Suchergebnissen zu verbessern." },
-    { question: "Können Sie bei E-Commerce-SEO helfen?", answer: "Wir haben umfangreiche Erfahrung in der Optimierung von E-Commerce-Websites, um die Sichtbarkeit von Produkten zu verbessern und den Umsatz zu steigern." },
-    { question: "Wie oft erhalte ich Fortschrittsberichte?", answer: "Wir stellen detaillierte monatliche Berichte zur Verfügung, aber Sie haben jederzeit Zugriff auf Echtzeit-Dashboards, um Ihren Fortschritt zu verfolgen." },
-    { question: "Bieten Sie Content-Erstellungsdienste an?", answer: "Ja, wir bieten Content-Erstellungsdienste als Teil unserer SEO-Pakete an. Dazu gehören u.a. Umformulierungen von Inhalten auf Ihrer Website sodass Kunden sie besser finden können." },
-    { question: "Was macht Ihre SEO-Agentur anders als andere?", answer: "Wir kombinieren fortschrittliche SEO-Techniken mit personalisierten Strategien und Kundenservice, um herausragende Ergebnisse für unsere Kunden zu erzielen." }
+    { question: "What is SEO?", answer: "SEO stands for Search Engine Optimization. It's the practice of optimizing your website to increase its visibility in search engine results pages." },
+    { question: "What is GEO?", answer: "GEO stands for Generative Engine Optimization. It's the practice of making a brand or business visible to AI search engines like ChatGPT, Google Gemini or Perplexity, in order to get recommended by AI's upon the user's interactions." },
+    { question: "What is AI Search Visibility?", answer: "AI Search Visibility: Businesses get recommended by AI engines as users interact with them. Engines can be such as ChatGPT, Google Gemini or Perplexity." },
+    { question: "How long does it take to see improvement results?", answer: "SEO is a long-term strategy. While some improvements can be seen within a few weeks, significant results typically take 3-6 months. When it comes to GEO the timeframes are similar to SEO updates, but we've also seen updates earlier as in a few days — simply put, it depends when an AI model is being updated." },
+    { question: "Do you guarantee first page rankings?", answer: "We don't guarantee specific rankings as search engines frequently update their algorithms. However, we do guarantee to significantly improve your website's visibility and organic traffic." },
+    { question: "What's included in your SEO services?", answer: "Our services include keyword research, on-page optimization, content creation, link building, and regular performance reporting." },
+    { question: "How do you measure SEO success?", answer: "We track various metrics including organic traffic, keyword rankings, conversion rates, and ROI to measure the success of our SEO campaigns." },
+    { question: "Do you offer local SEO services?", answer: "Yes, we offer local SEO services to help businesses improve their visibility in local search results." },
+    { question: "Can you help with e-commerce SEO?", answer: "We have extensive experience in optimizing e-commerce websites to improve product visibility and increase sales." },
+    { question: "How often will I receive progress reports?", answer: "We provide detailed monthly reports, but you'll have access to real-time dashboards to track your progress at any time." },
+    { question: "Do you offer content creation services?", answer: "Yes, we offer content creation services as part of our SEO packages. This includes blog posts, articles, and other types of content." },
+    { question: "What makes your SEO agency different from others?", answer: "We combine cutting-edge SEO techniques with personalized strategies and exceptional customer service to deliver outstanding results for our clients." }
   ]
 
   return (
@@ -40,7 +42,7 @@ export default function FAQ() {
     >
       <div className="container mx-auto px-4">
         <motion.h2 className="text-3xl font-bold mb-8 text-center" variants={fadeInUp}>
-          Häufig gestellte Fragen
+          Frequently Asked Questions
         </motion.h2>
         <motion.div variants={fadeInUp}>
           <Accordion type="single" collapsible className="w-full max-w-2xl mx-auto">

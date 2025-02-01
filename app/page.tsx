@@ -3,6 +3,7 @@
 import Navigation from '../components/organisms/navigation';
 import Hero from '../components/organisms/hero';
 import Services from '../components/organisms/services';
+import FAQ from '../components/organisms/faq';
 import Footer from '../components/organisms/footer';
 
 export default function LandingPage() {
@@ -18,8 +19,8 @@ export default function LandingPage() {
       <TargetAudience />
       <DriveCustomers />
       <WhyChooseUs />
-      <Pricing selectedPlan={selectedPlan} setSelectedPlan={setSelectedPlan} />
-      <FAQ /> */}
+      <Pricing selectedPlan={selectedPlan} setSelectedPlan={setSelectedPlan} /> */}
+      <FAQ />
       <Footer />
     </div>
   );
