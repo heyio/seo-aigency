@@ -31,7 +31,7 @@ export default function Navigation() {
             <div className="flex items-center">
               <MountainIcon className="h-6 w-6 text-purple-500" />
               <span className="font-bold text-xl px-2">
-                <span className="text-purple-500">SEO Ai</span>gency
+                <span className="text-purple-500">SEO AI</span>gency
               </span>
             </div>
             <div className="hidden md:flex space-x-4 font-medium">
@@ -41,8 +41,8 @@ export default function Navigation() {
               {/* <a href="#" className="text-gray-800 hover:text-gray-600">
                 Über uns
               </a> */}
-              <a href="mailto:hello@seo-aigency.com" className="text-gray-800 hover:text-gray-600">
-                Get in touch
+              <a href="https://cal.com/allanberger/15min?overlayCalendar=true" className="text-gray-800 hover:text-gray-600 font-bold">
+                Get Free Demo
               </a>
             </div>
             <button
@@ -94,7 +94,7 @@ export default function Navigation() {
                   variants={menuItemVariants}
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  Get in touch
+                  Get Free Demo
                 </motion.a>
               </motion.div>
             </div>

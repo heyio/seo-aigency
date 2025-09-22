@@ -175,22 +175,33 @@ export default function Hero() {
 
   return (
     <motion.section
-      className="text-center mx-auto max-w-4xl px-4 pt-32 pb-4"
+      className="text-center mx-auto max-w-5xl px-4 pt-32 pb-4"
       initial="initial"
       animate="animate"
       variants={staggerChildren}
     >
       <motion.div className="" variants={fadeInUp}>
         <BlurIn
-          word="Make businesses visible on Search & AI Engines"
+          word="Boost your business on Google & ChatGPT"
           className="text-6xl font-bold mb-10 bg-gradient-to-b from-indigo-400 to-purple-500 text-transparent inline-block bg-clip-text"
         />
       </motion.div>
-      <motion.p className="text-2xl mb-16 px-4 max-w-3xl mx-auto" variants={fadeInUp}>
-        Simply enter your website link to analyse it for free. SEO Aigency will help you to improve engine rankings, increase conversions and monitor your brand to get recommended by AI&apos;s.
+      <motion.p className="text-2xl mb-10 px-4 max-w-4xl mx-auto" variants={fadeInUp}>
+        Your automated SEO cockpit powered by AI, built for your business’s growth.
       </motion.p>
+      <div className="rounded px-8 pb-8 mb-4 max-w-m mx-auto">
+        <a className="text-xl bg-violet-700 hover:bg-violet-500 text-white font-bold py-4 px-20 rounded-full w-full focus:outline-none focus:shadow-outline disabled:bg-slate-400" href="https://seo-aigency.vercel.app/">
+          Try for Free
+        </a>
+        <div className="mt-8 text-sm text-gray-600">
+          30 day money-back guarantee. No credit card required.
+        </div>
+      </div>
       <motion.p variants={fadeInUp}>
         <img src="/hero.png" className="w-full h-full object-cover border rounded-xl"></img>
+      </motion.p>
+      <motion.p className="text-xl mb-10 mt-10 px-4 max-w-3xl mx-auto" variants={fadeInUp}>
+        Simply enter your website link to analyse it for free. SEO Aigency will help you to improve engine rankings, increase conversions and monitor your brand to get recommended by AI&apos;s.
       </motion.p>
       <div className="max-w-full mx-auto mb-8">{renderStep()}</div>
     </motion.section >
