@@ -50,7 +50,7 @@ export default function WhySeoAigency() {
     };
 
     return (
-        <div className="min-h-screen bg-white p-8">
+        <div className="bg-white p-8">
             <motion.section
                 className="text-center mx-auto max-w-5xl px-4 pt-24 pb-4"
                 initial="initial"

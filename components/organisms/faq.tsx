@@ -34,21 +34,21 @@ export default function FAQ() {
 
   return (
     <motion.section
-      className="py-16"
+      className="py-24"
       initial="initial"
       whileInView="animate"
       viewport={{ once: true }}
       variants={staggerChildren}
     >
       <div className="container mx-auto px-4">
-        <motion.h2 className="text-3xl font-bold mb-8 text-center" variants={fadeInUp}>
-          Frequently Asked Questions
+        <motion.h2 className="text-6xl font-bold mb-8 text-center" variants={fadeInUp}>
+          FAQ
         </motion.h2>
         <motion.div variants={fadeInUp}>
-          <Accordion type="single" collapsible className="w-full max-w-2xl mx-auto">
+          <Accordion type="single" collapsible className="w-full max-w-4xl mx-auto">
             {faqs.map((item, index) => (
               <AccordionItem value={`item-${index}`} key={index}>
-                <AccordionTrigger className="font-bold text-xl text-left">{item.question}</AccordionTrigger>
+                <AccordionTrigger className="font-bold text-2xl text-left">{item.question}</AccordionTrigger>
                 <AccordionContent className="text-lg">{item.answer}</AccordionContent>
               </AccordionItem>
             ))}

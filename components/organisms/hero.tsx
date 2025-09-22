@@ -191,7 +191,7 @@ export default function Hero() {
       </motion.p>
       <div className="rounded px-8 pb-8 mb-4 max-w-m mx-auto">
         <a className="text-xl bg-violet-700 hover:bg-violet-500 text-white font-bold py-4 px-20 rounded-full w-full focus:outline-none focus:shadow-outline disabled:bg-slate-400" href="https://seo-aigency.vercel.app/">
-          Try for Free
+          Try SEO AIgency for Free
         </a>
       </div>
       <motion.p variants={fadeInUp}>
