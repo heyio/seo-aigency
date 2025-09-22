@@ -36,8 +36,8 @@ const Newsletter = () => {
 
   return (
     <>
-      <div className="text-2xl pt-4 max-w-full mx-auto">
-        Be among the first to use SEO Aigency.
+      <div className="text-2xl pt-4 max-w-xl mx-auto">
+        Subscribe to our Newsletter for latest Tips on SEO, AI Search Visibility and Feature Releases.
       </div>
       <form
         className="rounded px-8 pt-6 pb-8 mb-4 max-w-md mx-auto"
