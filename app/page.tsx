@@ -7,6 +7,7 @@ import FAQ from '../components/organisms/faq';
 import Footer from '../components/organisms/footer';
 import Features from '@/components/organisms/features';
 import WhySeoAigency from '@/components/organisms/why-seoaigency';
+import Flow from '@/components/organisms/flow';
 
 export default function LandingPage() {
   return (
@@ -14,7 +15,7 @@ export default function LandingPage() {
       <Navigation />
       <Hero />
       <Features />
-      <Services />
+      <Flow />
       <WhySeoAigency />
       {/* <GoogleRanking />
       <TwoColumnSection />

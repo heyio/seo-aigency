@@ -68,7 +68,7 @@ export default function Features() {
                         <p className="text-gray-600 mb-4">
                             Build your SEO strategy, analyze competitors, and optimize your keywords with ease.
                         </p>
-                        <Button className="font-bold text-md rounded-full bg-violet-700 hover:bg-violet-500">🚀 Start now</Button>
+                        <a className="text-white font-bold text-md rounded-full bg-violet-700 hover:bg-violet-500 px-4 py-2" href="https://seo-aigency.vercel.app/">🚀 Start now</a>
                     </CardContent>
                 </Card>
 
