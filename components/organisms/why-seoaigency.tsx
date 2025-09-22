@@ -60,7 +60,7 @@ export default function WhySeoAigency() {
                 <motion.div className="" variants={fadeInUp}>
                     <BlurIn
                         word="Optimized for effectiveness"
-                        className="text-sm text-center font-bold mb-10 bg-gradient-to-b from-indigo-400 to-purple-500 text-transparent inline-block bg-clip-text"
+                        className="text-4xl text-center font-bold mb-10 bg-gradient-to-b from-indigo-400 to-purple-500 text-transparent inline-block bg-clip-text"
                     />
                 </motion.div>
                 <motion.p className="text-xl mb-10 px-4 max-w-4xl mx-auto" variants={fadeInUp}>
