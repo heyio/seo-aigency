@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import Image from 'next/image';
 
 export default function ProjectShowcase() {
   const fadeInUp = {
@@ -93,9 +94,11 @@ export default function ProjectShowcase() {
                 </CardHeader>
                 <CardContent>
                   <div className="relative h-64 mb-4 overflow-hidden rounded-lg">
-                    <img
-                      src={`/unsplash.jpg?height=256&width=384`}
-                      alt={`Project ${columnIndex}`}
+                    <Image
+                      src={`/unsplash.jpg`}
+                      alt={`Project ${columnIndex + 1} showcase image`}
+                      width={384}
+                      height={256}
                       className="w-full h-full object-cover"
                     />
                   </div>

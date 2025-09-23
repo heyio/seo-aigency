@@ -2,7 +2,6 @@
 
 import Navigation from '../components/organisms/navigation';
 import Hero from '../components/organisms/hero';
-import Services from '../components/organisms/services';
 import FAQ from '../components/organisms/faq';
 import Footer from '../components/organisms/footer';
 import Features from '@/components/organisms/features';

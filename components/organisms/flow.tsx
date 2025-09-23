@@ -2,11 +2,10 @@
 
 import React, { useState, useEffect, useRef } from "react";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import BlurIn from "../ui/blur-in";
-import RankCounter from "./rankcounter";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import Image from "next/image";
 
 // Central dictionary for all card content
 const cards: {
@@ -154,7 +153,13 @@ export default function EightCardsCanvas() {
                                     <div className="relative" style={{ paddingTop: "75%" }}>
                                         <div className="absolute inset-0 flex items-center justify-center text-gray-400">
                                             <div className="w-5/6 h-4/6 bg-white border-dashed border-2 border-gray-200 rounded-lg flex items-center justify-center">
-                                                <img src={c.image} className="w-full h-full object-cover border rounded-xl"></img>
+                                                <Image 
+                                                    src={c.image} 
+                                                    alt={`${c.title} - ${c.subtitle}`}
+                                                    width={500}
+                                                    height={400}
+                                                    className="w-full h-full object-cover border rounded-xl" 
+                                                />
                                             </div>
                                         </div>
                                     </div>

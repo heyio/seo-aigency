@@ -44,7 +44,7 @@ export default function Footer() {
           </motion.div>
         </div>
         <motion.div className="text-sm mt-8 text-center" variants={fadeInUp}>
-          <p>&copy; 2025 SEO AIgency — Built for your business's growth. All rights reserved.</p>
+          <p>&copy; 2025 SEO AIgency &mdash; Built for your business&apos;s growth. All rights reserved.</p>
         </motion.div>
       </div >
     </motion.footer >
