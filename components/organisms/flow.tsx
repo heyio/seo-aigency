@@ -136,7 +136,7 @@ export default function EightCardsCanvas() {
 
             {/* Carousel */}
             <div
-                className="relative w-full max-w-5xl overflow-hidden"
+                className="relative w-full max-w-5xl md:w-1/2 overflow-hidden"
                 onTouchStart={handleTouchStart}
                 onTouchEnd={handleTouchEnd}
             >
