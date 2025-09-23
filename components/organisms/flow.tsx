@@ -1,11 +1,12 @@
 "use client";
 
-import React from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import BlurIn from "../ui/blur-in";
 import RankCounter from "./rankcounter";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 // Central dictionary for all card content
 const cards: {
@@ -64,7 +65,41 @@ const cards: {
         }
     ];
 
-export default function Flow() {
+export default function EightCardsCanvas() {
+    const [current, setCurrent] = useState(0);
+    const startX = useRef<number | null>(null);
+
+
+    const nextCard = () => setCurrent((prev) => (prev + 1) % cards.length);
+    const prevCard = () => setCurrent((prev) => (prev - 1 + cards.length) % cards.length);
+
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            nextCard();
+        }, 8000);
+        return () => clearInterval(interval);
+    }, []);
+
+
+    // Touch events for swipe support
+    const handleTouchStart = (e: React.TouchEvent) => {
+        startX.current = e.touches[0].clientX;
+    };
+
+
+    const handleTouchEnd = (e: React.TouchEvent) => {
+        if (startX.current !== null) {
+            const diff = startX.current - e.changedTouches[0].clientX;
+            if (diff > 50) {
+                nextCard();
+            } else if (diff < -50) {
+                prevCard();
+            }
+        }
+        startX.current = null;
+    };
+
     const fadeInUp = {
         initial: { opacity: 0, y: 60 },
         animate: { opacity: 1, y: 0 },
@@ -79,7 +114,8 @@ export default function Flow() {
         },
     };
     return (
-        <div className="min-h-screen bg-white text-center max-w-screen-xl mx-auto pb-4">
+        <div className="min-h-min bg-white p-8 flex flex-col items-center">
+
             <motion.section
                 className="text-center mx-auto max-w-5xl px-4 pt-16 pb-4"
                 initial="initial"
@@ -97,26 +133,63 @@ export default function Flow() {
                 </motion.p>
             </motion.section>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+            {/* Carousel */}
+            <div
+                className="relative w-full max-w-5xl overflow-hidden"
+                onTouchStart={handleTouchStart}
+                onTouchEnd={handleTouchEnd}
+            >
                 {cards.map((c, idx) => (
-                    <Card key={idx} className="bg-white border shadow-sm">
-                        <CardHeader>
-                            <CardTitle className="text-xl font-semibold text-gray-600">{c.title} - {c.subtitle}</CardTitle>
-                        </CardHeader>
-                        <CardContent>
-                            {/* 16:9 screenshot placeholder */}
-                            <div className="w-full bg-gray-100 rounded-lg overflow-hidden mb-3">
-                                <div className="relative" style={{ paddingTop: '75%' }}>
-                                    <div className="absolute inset-0 flex items-center justify-center text-gray-400">
-                                        <div className="w-5/6 h-4/6 bg-white border-dashed border-2 border-gray-200 rounded-lg flex items-center justify-center">
-                                            <img src={c.image} className="w-full h-full object-cover border rounded-xl"></img>
+                    <div
+                        key={idx}
+                        className={`transition-opacity duration-500 ${idx === current ? "opacity-100" : "opacity-0 absolute inset-0"}`}
+                    >
+                        <Card className="bg-white border shadow-sm">
+                            <CardHeader>
+                                <CardTitle className="text-3xl max-w-2xl mx-auto text-center font-bold text-gray-600 mb-2 mt-2">{c.title} - {c.subtitle}</CardTitle>
+                            </CardHeader>
+                            <CardContent>
+                                <div className="w-full bg-gray-50 rounded-lg overflow-hidden mb-3">
+                                    <div className="relative" style={{ paddingTop: "75%" }}>
+                                        <div className="absolute inset-0 flex items-center justify-center text-gray-400">
+                                            <div className="w-5/6 h-4/6 bg-white border-dashed border-2 border-gray-200 rounded-lg flex items-center justify-center">
+                                                <img src={c.image} className="w-full h-full object-cover border rounded-xl"></img>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <p className="text-md text-gray-700 max-w-md mx-auto mt-5">{c.short}</p>
-                        </CardContent>
-                    </Card>
+                                <p className="text-md text-gray-700 max-w-xl mx-auto text-center mt-5">{c.short}</p>
+                            </CardContent>
+                        </Card>
+                    </div>
+                ))}
+
+
+                {/* Navigation buttons */}
+                <button
+                    onClick={prevCard}
+                    className="absolute top-1/2 left-0 transform -translate-y-1/2 bg-white rounded-full shadow p-2"
+                >
+                    <ChevronLeft className="w-5 h-5 text-gray-700" />
+                </button>
+                <button
+                    onClick={nextCard}
+                    className="absolute top-1/2 right-0 transform -translate-y-1/2 bg-white rounded-full shadow p-2"
+                >
+                    <ChevronRight className="w-5 h-5 text-gray-700" />
+                </button>
+            </div>
+
+
+            {/* Dots */}
+            <div className="flex space-x-2 mt-4">
+                {cards.map((_, idx) => (
+                    <button
+                        key={idx}
+                        onClick={() => setCurrent(idx)}
+                        className={`w-3 h-3 rounded-full ${idx === current ? "bg-blue-500" : "bg-gray-300"}`}
+                    />
                 ))}
             </div>
         </div>
