@@ -5,6 +5,7 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import BlurIn from "../ui/blur-in";
+import RankCounter from "./rankcounter";
 
 // Central dictionary for all card content
 const cards: {
@@ -15,13 +16,13 @@ const cards: {
 }[] = [
         {
             title: "Step 1",
-            subtitle: "Anaylze your website & Website Audit",
+            subtitle: "Website Analysis & Audit",
             short: "Analyze your website and get a comprehensive SEO audit with actionable insights. This include the page speed score, core web vitals, and other important SEO factors like page structure from how Google see's it.",
             image: "/check-action-001.png"
         },
         {
             title: "Step 2",
-            subtitle: "Explain your Business & Define your Strategy via Text or Voice",
+            subtitle: "Optionally explain your Business & define your strategy via Text or Voice Input",
             short: "Explain your business, target audience, and goals via text or voice to help us tailor the SEO strategy to your specific needs.",
             image: "/strategy-input-001.png"
         },
@@ -29,18 +30,18 @@ const cards: {
             title: "Step 3",
             subtitle: "Identify your Competition & Keywords Determination based on your Strategy",
             short: "Identify competitors and determine relevant keywords for your business niche.",
-            image: "/competitor-benchmark.png"
+            image: "/competitor-selection-001.png"
         },
         {
             title: "Step 4",
             subtitle: "Content Creation based on chosen Keyword",
             short: "High-quality, SEO-optimized content is created based on the chosen keywords to improve search engine rankings and attract organic traffic.",
-            image: "/content-generation-001.png"
+            image: "/content-generation-002.png"
         },
         {
             title: "Step 5",
-            subtitle: "Implement Content into your Website",
-            short: "Easily implement the created content into your website with your CMS (e.g., WordPress, Wix, Squarespace) or manually.",
+            subtitle: "Implement improved Content into your Website",
+            short: "Easily implement the created content or suggested new page into your website with your CMS (e.g., WordPress, Wix, Squarespace) or manually.",
             image: "/cms-overview-001.png"
         },
         {
@@ -53,11 +54,11 @@ const cards: {
             title: "Step 7",
             subtitle: "Monthly Reports",
             short: "Receive monthly reports to monitor progress, track keyword rankings, and measure the effectiveness of the SEO strategy.",
-            image: "/dashboard-002.png"
+            image: "/reports-002.png"
         },
         {
             title: "Step 8",
-            subtitle: "Rinse & Repeat for other keywords",
+            subtitle: "Rinse & Repeat for other pages and keywords",
             short: "Repeat the process for other keywords to continuously improve your website's SEO and maintain a strong online presence.",
             image: "/check-action-001.png"
         }
@@ -78,7 +79,7 @@ export default function Flow() {
         },
     };
     return (
-        <div className="min-h-screen bg-white text-center max-w-screen-xl mx-auto pt-24 pb-4">
+        <div className="min-h-screen bg-white text-center max-w-screen-xl mx-auto pb-4">
             <motion.section
                 className="text-center mx-auto max-w-5xl px-4 pt-16 pb-4"
                 initial="initial"
@@ -100,11 +101,9 @@ export default function Flow() {
                 {cards.map((c, idx) => (
                     <Card key={idx} className="bg-white border shadow-sm">
                         <CardHeader>
-                            <CardTitle className="text-xl font-semibold text-gray-800">{c.title}</CardTitle>
+                            <CardTitle className="text-xl font-semibold text-gray-600">{c.title} - {c.subtitle}</CardTitle>
                         </CardHeader>
                         <CardContent>
-                            <p className="text-md text-gray-600 mb-3">{c.subtitle}</p>
-
                             {/* 16:9 screenshot placeholder */}
                             <div className="w-full bg-gray-100 rounded-lg overflow-hidden mb-3">
                                 <div className="relative" style={{ paddingTop: '75%' }}>
@@ -115,12 +114,7 @@ export default function Flow() {
                                     </div>
                                 </div>
                             </div>
-
-                            <p className="text-md text-gray-700 max-w-md mx-auto">{c.short}</p>
-
-                            <div className="mt-4 flex justify-center">
-                                <Button size="lg" className="bg-purple-400 rounded-full font-bold">View</Button>
-                            </div>
+                            <p className="text-md text-gray-700 max-w-md mx-auto mt-5">{c.short}</p>
                         </CardContent>
                     </Card>
                 ))}

@@ -8,6 +8,7 @@ import { Progress } from "@/components/ui/progress";
 import { LineChart, Line, XAxis, YAxis, Tooltip, ResponsiveContainer, BarChart, Bar } from "recharts";
 import { ChartNoAxesColumn, Users, Target, Globe, BarChart2, Zap } from "lucide-react";
 import BlurIn from "../ui/blur-in";
+import RankCounter from "./rankcounter";
 
 const followerData = [
     { name: "Jan", followers: 120, visits: 200 },
@@ -106,6 +107,7 @@ export default function Features() {
                             <li>☑️ Competitor analysis</li>
                             <li>☑️ Content ideas</li>
                         </ul>
+                        <RankCounter />
                     </CardContent>
                 </Card>
 
