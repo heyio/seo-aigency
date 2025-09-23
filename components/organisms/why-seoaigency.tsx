@@ -91,11 +91,11 @@ export default function WhySeoAigency() {
                                 <div className="flex flex-col gap-2">
                                     <div className="rounded-full bg-cyan-50 h-8 flex items-center px-3 max-w-64">
                                         <div className="bg-cyan-100 rounded-full h-3 w-3 mr-3" />
-                                        <span className="text-md text-gray-600">SEO AIGENCY ~15 min</span>
+                                        <span className="text-sm md:text-md text-gray-600">SEO AIGENCY ~15 min</span>
                                     </div>
                                     <div className="rounded-full bg-gray-100 h-8 flex items-center px-3">
                                         <div className="bg-gray-300 rounded-full h-3 w-3 mr-3" />
-                                        <span className="text-md text-gray-600">without SEO AIGENCY ~3 hours</span>
+                                        <span className="text-sm md:text-md text-gray-600">without SEO AIGENCY ~3 hours</span>
                                     </div>
                                 </div>
                             </div>
@@ -103,24 +103,28 @@ export default function WhySeoAigency() {
                     </Card>
 
                     {/* Bottom left: ~30% of the column height */}
-                    <Card className="h-[30%] bg-white border shadow-sm flex flex-col justify-center items-center">
+                    <Card className="h-auto bg-white border shadow-sm">
                         <CardHeader>
-                            <CardTitle className="text-cyan-500 text-xl">Consistency Tracker</CardTitle>
+                            <CardTitle className="text-cyan-500 text-xl text-left">Consistency Tracker</CardTitle>
                         </CardHeader>
-                        <CardContent className="w-full flex items-center justify-center">
-                            <div className="flex items-center gap-3">
-                                <div className="flex items-center gap-2 p-3 rounded-lg border">
+                        <CardContent className="space-y-4">
+                            <div className="flex flex-col md:flex-row md:items-center md:gap-6">
+                                {/* Days tracker - always on left */}
+                                <div className="flex items-center gap-1 md:gap-2 p-3 rounded-lg border w-fit">
                                     {"MTWTFSS".split("").map((d, i) => (
                                         <div
                                             key={i}
-                                            className={`w-8 h-8 flex items-center justify-center rounded-full ${i < 5 ? "bg-cyan-400 text-white" : "bg-gray-200 text-gray-600"}`}
+                                            className={`w-8 h-8 flex items-center justify-center rounded-full text-sm font-medium ${i < 5 ? "bg-cyan-400 text-white" : "bg-gray-200 text-gray-600"
+                                                }`}
                                         >
                                             {d}
                                         </div>
                                     ))}
                                 </div>
-                                <div>
-                                    <div className="font-semibold text-md">Finally improve consistently</div>
+
+                                {/* Text content - new row on mobile, same row on desktop */}
+                                <div className="text-left md:text-center">
+                                    <div className="font-semibold text-base">Finally improve consistently</div>
                                     <div className="text-sm text-gray-500">Set goals and keep your streak</div>
                                 </div>
                             </div>

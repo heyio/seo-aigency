@@ -36,18 +36,18 @@ export default function Hero() {
       <motion.p className="text-2xl mb-10 px-4 max-w-4xl mx-auto" variants={fadeInUp}>
         Your automated SEO cockpit powered by AI, built for your business’s growth.
       </motion.p>
-      <motion.p className="rounded px-8 pb-8 mb-4 max-w-m mx-auto" variants={fadeInUp}>
-        <a className="text-xl bg-violet-700 hover:bg-violet-500 text-white font-bold py-4 px-20 rounded-full w-full focus:outline-none focus:shadow-outline disabled:bg-slate-400" href="https://seo-aigency.vercel.app/">
+      <motion.p className="rounded md:px-8 px-0 pb-8 mb-4 max-w-full mx-auto" variants={fadeInUp}>
+        <a className="text-xl bg-violet-700 hover:bg-violet-500 text-white font-bold py-4 px-10 rounded-full w-full focus:outline-none focus:shadow-outline disabled:bg-slate-400" href="https://seo-aigency.vercel.app/">
           Try SEO AIgency for Free
         </a>
       </motion.p>
       <motion.p variants={fadeInUp}>
-        <Image 
-          src="/hero.png" 
-          alt="SEO AIgency dashboard preview" 
-          width={1200} 
-          height={800} 
-          className="w-full h-full object-cover border rounded-xl" 
+        <Image
+          src="/hero.png"
+          alt="SEO AIgency dashboard preview"
+          width={1200}
+          height={800}
+          className="w-full h-full object-cover border rounded-xl"
         />
       </motion.p>
     </motion.section >
