@@ -39,13 +39,13 @@ export default function Pricing({ selectedPlan, setSelectedPlan }: PricingProps)
         </motion.div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {[
-            { name: 'Basic', price: 'EUR 119 p. Monat', checkFrequency: '1x pro Monat' },
-            { name: 'Pro', price: 'EUR 499 p. Monat', checkFrequency: '1x pro Woche' },
-            { name: 'Boost', price: 'EUR 999 p. Monat', checkFrequency: '2x pro Woche' }
+            { name: 'Basic', price: 'EUR 49/month', checkFrequency: '1x Page' },
+            { name: 'Pro', price: 'EUR 99/month', checkFrequency: '5x Pages' },
+            { name: 'Boost', price: 'EUR 299/month', checkFrequency: '10x Pages' }
           ].map((plan, index) => (
             <motion.div key={index} variants={fadeInUp}>
-              <Card className={selectedPlan === plan.name.toLowerCase() ? 'border-purple-500 border-2 bg-gradient-to-b from-white to-purple-200' : 
-              'bg-gradient-to-b from-white to-gray-100'}>
+              <Card className={selectedPlan === plan.name.toLowerCase() ? 'border-purple-500 border-2 bg-white' :
+                'bg-white'}>
                 <CardHeader>
                   <CardTitle className="text-3xl">{plan.name}</CardTitle>
                   <CardDescription className="text-xl">{plan.price}</CardDescription>
@@ -53,14 +53,14 @@ export default function Pricing({ selectedPlan, setSelectedPlan }: PricingProps)
                 <CardContent>
                   <ul className="list-disc list-inside">
                     <li>SEO-optimierter Website-Inhalt</li>
-                    <li>Human Check {plan.checkFrequency}</li>
+                    <li>{plan.checkFrequency}</li>
                     <li>Geführte Unterstützung</li>
                   </ul>
                 </CardContent>
                 <CardFooter>
                   <Button
-                    className={selectedPlan === plan.name.toLowerCase() ? 'w-full text-base font-semibold' : 
-              'w-full text-base font-semibold'}
+                    className={selectedPlan === plan.name.toLowerCase() ? 'w-full text-base font-semibold' :
+                      'w-full text-base font-semibold'}
                     onClick={() => setSelectedPlan(plan.name.toLowerCase())}
                   >
                     Abo wählen
